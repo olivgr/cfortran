@@ -1,7 +1,7 @@
 CC = gcc
 FC = gfortran
 
-CFLAGS = -Iinclude
+CFLAGS = -Iinclude -Wall -Wextra -g
 
 OBJS = \
 	   build/main.o \
