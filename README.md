@@ -8,4 +8,4 @@ to run the app run:
 
 # About
 This is an example of how to call a Fortran subroutine from C code,
-using a bride file.
+using a bridge file.
