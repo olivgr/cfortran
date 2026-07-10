@@ -1,0 +1,21 @@
+# Build output
+build/
+app
+
+# Object files
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Vim
+*.swp
+*.swo
+
+# Macos
+.DS_Store
+
+# Nix
+result
