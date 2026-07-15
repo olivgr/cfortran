@@ -85,3 +85,32 @@ subroutine median(values, n, result)
         result = sorted_values((n+1)/2)
     end if
 end subroutine median
+
+subroutine geometric_mean(values, n, result)
+    implicit none
+    integer :: n
+    real*8 :: values(n)
+    real*8 :: result
+    integer :: i
+    real*8 :: product
+
+    ! Initialize the product to 1.0
+    product = 1.0
+
+    ! Calculate the product of all elements in the array
+    do i = 1, n
+        if (values(i) > 0) then
+            product = product * values(i)
+        else
+            result = 0.0  ! If any element is non-positive, the geometric mean is undefined and set to zero
+            return
+        end if
+    end do
+
+    ! Calculate the geometric mean by taking the nth root of the product
+    if (n /= 0) then
+        result = product ** (1.0 / n)
+    else
+        result = 0.0  ! In case of division by zero due to all zeros in values, set the result to zero
+    end if
+end subroutine geometric_mean
