@@ -14,6 +14,7 @@ subroutine average(values, n, result)
     end do 
 
     ! Calculate the arithmetic mean by dividing the sum by the number of elements
+    ! /= is "not equal to" in Fortran 
     if (n /= 0) then
         result = result / n
     else
