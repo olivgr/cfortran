@@ -11,8 +11,10 @@ int main(void) {
     };
 
     double avg = average(numbers, 4);
-
     printf("Average = %.2f\n", avg);
+
+    double hmean = harmonic_mean(numbers, 4);
+    printf("Harmonic mean = %.2f\n", hmean);
 
     return 0;
 }

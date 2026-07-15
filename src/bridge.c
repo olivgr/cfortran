@@ -17,3 +17,15 @@ double average(const double *values, int n) {
 
     return result;
 }
+
+extern void harmonic_mean_(double *values,
+                           int *n,
+                           double *result);
+
+double harmonic_mean(const double *values, int n) {
+    double result;
+
+    harmonic_mean_((double *)values, &n, &result);
+
+    return result;
+}
